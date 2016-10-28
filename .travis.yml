@@ -14,6 +14,3 @@ before_install:
 
 script:
   - docker run -it --rm -v $PWD/publish:/root/publish -v $PWD/packages:/root/.nuget/packages webapp:test
-
-deploy:
-  skip_cleanup: true
