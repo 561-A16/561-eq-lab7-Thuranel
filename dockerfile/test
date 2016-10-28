@@ -4,9 +4,9 @@ WORKDIR /src
 
 ENV ASPNETCORE_URLS http://+:5000
 
-CMD ["sh", "/script/run.sh"]
-COPY /Docker/run.sh /script/run.sh
-RUN chmod +x ../../script/run.sh
+CMD ["sh", "/scripts/testAndPublish.sh"]
+COPY /scripts/testAndPublish.sh /script/testAndPublish.sh
+RUN chmod +x ../../script/testAndPublish.sh
 
 COPY /src /src
 
